@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QyzlModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="QyzlModelStoreContainer">
+    <EntitySet Name="QY_DataType" EntityType="QyzlModel.Store.QY_DataType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QY_Relation" EntityType="QyzlModel.Store.QY_Relation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QY_SonDataType" EntityType="QyzlModel.Store.QY_SonDataType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QY_Unit" EntityType="QyzlModel.Store.QY_Unit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QY_YearNum" EntityType="QyzlModel.Store.QY_YearNum" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="QyzlModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_Classify" EntityType="QyzlModel.Store.ZL_Classify" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_ClassifyData" EntityType="QyzlModel.Store.ZL_ClassifyData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_Data" EntityType="QyzlModel.Store.ZL_Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_DataType" EntityType="QyzlModel.Store.ZL_DataType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_GsCompany" EntityType="QyzlModel.Store.ZL_GsCompany" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_ViewName" EntityType="QyzlModel.Store.ZL_ViewName" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_ViewSonType" EntityType="QyzlModel.Store.ZL_ViewSonType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZL_ViewType" EntityType="QyzlModel.Store.ZL_ViewType" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__ZL_DataType" Association="QyzlModel.Store.FK__ZL_DataType">
+      <End Role="ZL_DataType" EntitySet="ZL_DataType" />
+      <End Role="ZL_DataType1" EntitySet="ZL_DataType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QY_SonDataType_QY_DataType" Association="QyzlModel.Store.FK_QY_SonDataType_QY_DataType">
+      <End Role="QY_DataType" EntitySet="QY_DataType" />
+      <End Role="QY_SonDataType" EntitySet="QY_SonDataType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QY_SonDataType_QY_Unit" Association="QyzlModel.Store.FK_QY_SonDataType_QY_Unit">
+      <End Role="QY_Unit" EntitySet="QY_Unit" />
+      <End Role="QY_SonDataType" EntitySet="QY_SonDataType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QY_YearNum_QY_SonDataType" Association="QyzlModel.Store.FK_QY_YearNum_QY_SonDataType">
+      <End Role="QY_SonDataType" EntitySet="QY_SonDataType" />
+      <End Role="QY_YearNum" EntitySet="QY_YearNum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QY_YearNum_QY_Unit" Association="QyzlModel.Store.FK_QY_YearNum_QY_Unit">
+      <End Role="QY_Unit" EntitySet="QY_Unit" />
+      <End Role="QY_YearNum" EntitySet="QY_YearNum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_Classify" Association="QyzlModel.Store.FK_ZL_Classify">
+      <End Role="ZL_DataType" EntitySet="ZL_DataType" />
+      <End Role="ZL_Classify" EntitySet="ZL_Classify" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_ClassifyData" Association="QyzlModel.Store.FK_ZL_ClassifyData">
+      <End Role="ZL_Classify" EntitySet="ZL_Classify" />
+      <End Role="ZL_ClassifyData" EntitySet="ZL_ClassifyData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_Data" Association="QyzlModel.Store.FK_ZL_Data">
+      <End Role="ZL_ClassifyData" EntitySet="ZL_ClassifyData" />
+      <End Role="ZL_Data" EntitySet="ZL_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_GsCompany" Association="QyzlModel.Store.FK_ZL_GsCompany">
+      <End Role="ZL_DataType" EntitySet="ZL_DataType" />
+      <End Role="ZL_GsCompany" EntitySet="ZL_GsCompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_ViewName" Association="QyzlModel.Store.FK_ZL_ViewName">
+      <End Role="ZL_ViewSonType" EntitySet="ZL_ViewSonType" />
+      <End Role="ZL_ViewName" EntitySet="ZL_ViewName" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_ViewSonType" Association="QyzlModel.Store.FK_ZL_ViewSonType">
+      <End Role="ZL_ViewType" EntitySet="ZL_ViewType" />
+      <End Role="ZL_ViewSonType" EntitySet="ZL_ViewSonType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZL_ViewType" Association="QyzlModel.Store.FK_ZL_ViewType">
+      <End Role="ZL_DataType" EntitySet="ZL_DataType" />
+      <End Role="ZL_ViewType" EntitySet="ZL_ViewType" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="QY_DataType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="defaultUnit" Type="int" />
+  </EntityType>
+  <EntityType Name="QY_Relation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sdtid" Type="int" />
+    <Property Name="sonsdtid" Type="int" />
+    <Property Name="tabName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QY_SonDataType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="dtid" Type="int" />
+    <Property Name="defaultUnit" Type="int" />
+  </EntityType>
+  <EntityType Name="QY_Unit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QY_YearNum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="presentYear" Type="varchar" MaxLength="50" />
+    <Property Name="sdtid" Type="int" />
+    <Property Name="Num" Type="numeric" Precision="12" Scale="4" />
+    <Property Name="unit" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UName" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UPwd" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="URole" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="ZL_Classify">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pid" Type="int" />
+    <Property Name="TableName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZL_ClassifyData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassifyID" Type="varchar" MaxLength="50" />
+    <Property Name="Cid" Type="int" />
+    <Property Name="IsToDb" Type="bit" />
+  </EntityType>
+  <EntityType Name="ZL_Data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AN" Type="nvarchar" MaxLength="450" />
+    <Property Name="Pd" Type="datetime" />
+    <Property Name="Ad" Type="datetime" />
+    <Property Name="Pa" Type="nvarchar" MaxLength="450" />
+    <Property Name="Inn" Type="nvarchar" MaxLength="450" />
+    <Property Name="Pic" Type="nvarchar" MaxLength="450" />
+    <Property Name="Sic" Type="nvarchar" MaxLength="450" />
+    <Property Name="IsSq" Type="bit" />
+    <Property Name="Flzt" Type="nvarchar" MaxLength="450" />
+    <Property Name="IsHand" Type="bit" />
+    <Property Name="CDID" Type="int" />
+    <Property Name="IsGs" Type="bit" />
+    <Property Name="Zllx" Type="nvarchar" MaxLength="64" />
+    <Property Name="SqDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ZL_DataType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ZL_GsCompany">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="did" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZL_ViewName">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ViewName" Type="varchar" MaxLength="50" />
+    <Property Name="zsid" Type="int" />
+  </EntityType>
+  <EntityType Name="ZL_ViewSonType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShowName" Type="nvarchar" MaxLength="300" />
+    <Property Name="zvid" Type="int" />
+    <Property Name="limits" Type="int" />
+    <Property Name="pid" Type="int" />
+  </EntityType>
+  <EntityType Name="ZL_ViewType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="View_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="ZDID" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“Qyzl.dbo.zl_data1”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“Qyzl.dbo.zl_data2”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“Qyzl.dbo.zl_data3”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <Association Name="FK__ZL_DataType">
+    <End Role="ZL_DataType" Type="QyzlModel.Store.ZL_DataType" Multiplicity="1" />
+    <End Role="ZL_DataType1" Type="QyzlModel.Store.ZL_DataType" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_DataType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_DataType1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QY_SonDataType_QY_DataType">
+    <End Role="QY_DataType" Type="QyzlModel.Store.QY_DataType" Multiplicity="0..1" />
+    <End Role="QY_SonDataType" Type="QyzlModel.Store.QY_SonDataType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QY_DataType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="QY_SonDataType">
+        <PropertyRef Name="dtid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QY_SonDataType_QY_Unit">
+    <End Role="QY_Unit" Type="QyzlModel.Store.QY_Unit" Multiplicity="0..1" />
+    <End Role="QY_SonDataType" Type="QyzlModel.Store.QY_SonDataType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QY_Unit">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="QY_SonDataType">
+        <PropertyRef Name="defaultUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QY_YearNum_QY_SonDataType">
+    <End Role="QY_SonDataType" Type="QyzlModel.Store.QY_SonDataType" Multiplicity="0..1" />
+    <End Role="QY_YearNum" Type="QyzlModel.Store.QY_YearNum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QY_SonDataType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="QY_YearNum">
+        <PropertyRef Name="sdtid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QY_YearNum_QY_Unit">
+    <End Role="QY_Unit" Type="QyzlModel.Store.QY_Unit" Multiplicity="0..1" />
+    <End Role="QY_YearNum" Type="QyzlModel.Store.QY_YearNum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QY_Unit">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="QY_YearNum">
+        <PropertyRef Name="unit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_Classify">
+    <End Role="ZL_DataType" Type="QyzlModel.Store.ZL_DataType" Multiplicity="0..1" />
+    <End Role="ZL_Classify" Type="QyzlModel.Store.ZL_Classify" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_DataType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_Classify">
+        <PropertyRef Name="Pid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_ClassifyData">
+    <End Role="ZL_Classify" Type="QyzlModel.Store.ZL_Classify" Multiplicity="0..1" />
+    <End Role="ZL_ClassifyData" Type="QyzlModel.Store.ZL_ClassifyData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_Classify">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_ClassifyData">
+        <PropertyRef Name="Cid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_Data">
+    <End Role="ZL_ClassifyData" Type="QyzlModel.Store.ZL_ClassifyData" Multiplicity="0..1" />
+    <End Role="ZL_Data" Type="QyzlModel.Store.ZL_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_ClassifyData">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_Data">
+        <PropertyRef Name="CDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_GsCompany">
+    <End Role="ZL_DataType" Type="QyzlModel.Store.ZL_DataType" Multiplicity="1" />
+    <End Role="ZL_GsCompany" Type="QyzlModel.Store.ZL_GsCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_DataType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_GsCompany">
+        <PropertyRef Name="did" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_ViewName">
+    <End Role="ZL_ViewSonType" Type="QyzlModel.Store.ZL_ViewSonType" Multiplicity="0..1" />
+    <End Role="ZL_ViewName" Type="QyzlModel.Store.ZL_ViewName" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_ViewSonType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_ViewName">
+        <PropertyRef Name="zsid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_ViewSonType">
+    <End Role="ZL_ViewType" Type="QyzlModel.Store.ZL_ViewType" Multiplicity="0..1" />
+    <End Role="ZL_ViewSonType" Type="QyzlModel.Store.ZL_ViewSonType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_ViewType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_ViewSonType">
+        <PropertyRef Name="zvid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZL_ViewType">
+    <End Role="ZL_DataType" Type="QyzlModel.Store.ZL_DataType" Multiplicity="0..1" />
+    <End Role="ZL_ViewType" Type="QyzlModel.Store.ZL_ViewType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZL_DataType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ZL_ViewType">
+        <PropertyRef Name="ZDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

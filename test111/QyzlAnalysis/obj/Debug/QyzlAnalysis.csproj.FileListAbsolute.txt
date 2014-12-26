@@ -1,0 +1,13 @@
+D:\sendmessage\QyzlAnalysis\QyzlAnalysis\bin\QyzlAnalysis.dll
+D:\sendmessage\QyzlAnalysis\QyzlAnalysis\bin\QyzlAnalysis.pdb
+D:\sendmessage\QyzlAnalysis\QyzlAnalysis\bin\EntityFramework.dll
+D:\sendmessage\QyzlAnalysis\QyzlAnalysis\bin\EntityFramework.xml
+D:\sendmessage\QyzlAnalysis\QyzlAnalysis\obj\Debug\QyzlAnalysis.dll
+D:\sendmessage\QyzlAnalysis\QyzlAnalysis\obj\Debug\QyzlAnalysis.pdb
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\bin\Newtonsoft.Json.dll
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\bin\Newtonsoft.Json.pdb
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\bin\Newtonsoft.Json.xml
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\bin\Ionic.Zip.dll
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\bin\NPOI.dll
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\bin\NPOI.xml
+D:\SendMessage\QyzlAnalysis\QyzlAnalysis\obj\Debug\QyzlAnalysis.csprojResolveAssemblyReference.cache

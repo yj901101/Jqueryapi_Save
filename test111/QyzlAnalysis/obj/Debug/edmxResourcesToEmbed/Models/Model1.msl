@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QyzlModelStoreContainer" CdmEntityContainer="QyzlEntities">
+    <EntitySetMapping Name="QY_DataType">
+      <EntityTypeMapping TypeName="QyzlModel.QY_DataType">
+        <MappingFragment StoreEntitySet="QY_DataType">
+          <ScalarProperty Name="defaultUnit" ColumnName="defaultUnit" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QY_SonDataType">
+      <EntityTypeMapping TypeName="QyzlModel.QY_SonDataType">
+        <MappingFragment StoreEntitySet="QY_SonDataType">
+          <ScalarProperty Name="defaultUnit" ColumnName="defaultUnit" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="dtid" ColumnName="dtid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QY_Unit">
+      <EntityTypeMapping TypeName="QyzlModel.QY_Unit">
+        <MappingFragment StoreEntitySet="QY_Unit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QY_YearNum">
+      <EntityTypeMapping TypeName="QyzlModel.QY_YearNum">
+        <MappingFragment StoreEntitySet="QY_YearNum">
+          <ScalarProperty Name="sdtid" ColumnName="sdtid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="presentYear" ColumnName="presentYear" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QY_Relation">
+      <EntityTypeMapping TypeName="QyzlModel.QY_Relation">
+        <MappingFragment StoreEntitySet="QY_Relation">
+          <ScalarProperty Name="tabName" ColumnName="tabName" />
+          <ScalarProperty Name="sonsdtid" ColumnName="sonsdtid" />
+          <ScalarProperty Name="sdtid" ColumnName="sdtid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="QyzlModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="URole" ColumnName="URole" />
+          <ScalarProperty Name="UPwd" ColumnName="UPwd" />
+          <ScalarProperty Name="UName" ColumnName="UName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_Classify">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_Classify">
+        <MappingFragment StoreEntitySet="ZL_Classify">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_ClassifyData">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_ClassifyData">
+        <MappingFragment StoreEntitySet="ZL_ClassifyData">
+          <ScalarProperty Name="IsToDb" ColumnName="IsToDb" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="ClassifyID" ColumnName="ClassifyID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_Data">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_Data">
+        <MappingFragment StoreEntitySet="ZL_Data">
+          <ScalarProperty Name="SqDate" ColumnName="SqDate" />
+          <ScalarProperty Name="Zllx" ColumnName="Zllx" />
+          <ScalarProperty Name="IsGs" ColumnName="IsGs" />
+          <ScalarProperty Name="CDID" ColumnName="CDID" />
+          <ScalarProperty Name="IsHand" ColumnName="IsHand" />
+          <ScalarProperty Name="Flzt" ColumnName="Flzt" />
+          <ScalarProperty Name="IsSq" ColumnName="IsSq" />
+          <ScalarProperty Name="Sic" ColumnName="Sic" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="Inn" ColumnName="Inn" />
+          <ScalarProperty Name="Pa" ColumnName="Pa" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Pd" ColumnName="Pd" />
+          <ScalarProperty Name="AN" ColumnName="AN" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_DataType">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_DataType">
+        <MappingFragment StoreEntitySet="ZL_DataType">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_GsCompany">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_GsCompany">
+        <MappingFragment StoreEntitySet="ZL_GsCompany">
+          <ScalarProperty Name="did" ColumnName="did" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_ViewName">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_ViewName">
+        <MappingFragment StoreEntitySet="ZL_ViewName">
+          <ScalarProperty Name="zsid" ColumnName="zsid" />
+          <ScalarProperty Name="ViewName" ColumnName="ViewName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_ViewSonType">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_ViewSonType">
+        <MappingFragment StoreEntitySet="ZL_ViewSonType">
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="limits" ColumnName="limits" />
+          <ScalarProperty Name="zvid" ColumnName="zvid" />
+          <ScalarProperty Name="ShowName" ColumnName="ShowName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZL_ViewType">
+      <EntityTypeMapping TypeName="QyzlModel.ZL_ViewType">
+        <MappingFragment StoreEntitySet="ZL_ViewType">
+          <ScalarProperty Name="ZDID" ColumnName="ZDID" />
+          <ScalarProperty Name="View_name" ColumnName="View_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
